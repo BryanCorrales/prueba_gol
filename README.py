@@ -19,13 +19,12 @@ def movertri(event):
         if posx<=110:
             widget.pack()
             print("GOL")
-
         print(posx)
     elif event.keysym == 'Down':
         canvas.move(1,0,3)
         posy=posy+3
-        if posy==220:
-            print("GOL")
+        if posy>=300:
+            widget.destroy()
         print(posy)
     elif event.keysym == 'Left':
         canvas.move(1,-3,0)
